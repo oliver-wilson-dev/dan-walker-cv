@@ -28,5 +28,5 @@ This project is managed via [this](https://www.notion.so/Dan-Walker-CV-Website-f
 
 ## Contributors
 
-- **Dan Walker** - project manager
-- **Oliver Wilson** - software engineer
+- **Dan Walker** (_insert@email.com_) - project manager 
+- **Oliver Wilson** (_contact@oliverwilson.dev_) - software engineer
