@@ -38,22 +38,23 @@
     "bfj": "^7.0.2",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "4.3.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.1.0",
-    "eslint": "^7.11.0",
     "file-loader": "6.1.1",
     "html-webpack-plugin": "4.5.0",
+    "jest": "26.6.0",
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
-    "jest": "26.6.0",
     "mini-css-extract-plugin": "0.11.3",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "pnp-webpack-plugin": "1.6.4",
@@ -65,23 +66,17 @@
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.1",
     "react-refresh": "^0.8.3",
-    "resolve-url-loader": "^3.1.2",
     "resolve": "1.18.1",
+    "resolve-url-loader": "^3.1.2",
     "sass-loader": "8.0.2",
     "semver": "7.3.2",
     "terser-webpack-plugin": "4.2.3",
     "ts-pnp": "1.2.0",
     "url-loader": "4.1.1",
+    "webpack": "4.44.2",
     "webpack-dev-server": "3.11.0",
     "webpack-manifest-plugin": "2.2.0",
-    "webpack": "4.44.2",
     "workbox-webpack-plugin": "5.1.4"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -98,10 +93,7 @@
   "babel": {
     "presets": [
       [
-        "react-app",
-        {
-          "runtime": "automatic"
-        }
+        "react-app"
       ]
     ]
   }
