@@ -1,7 +1,9 @@
 module.exports = {
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts'
+    '!src/**/*.d.ts',
+    '!**/*reportWebVitals.js'
   ],
   setupFiles: [
     'react-app-polyfill/jsdom'
