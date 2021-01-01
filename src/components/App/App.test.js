@@ -3,6 +3,6 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 const render = () => shallow(<App />);
-test('renders learn react link', () => {
+it('renders correctly', () => {
   expect(render()).toMatchSnapshot();
 });
