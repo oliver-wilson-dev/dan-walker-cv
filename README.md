@@ -1,6 +1,6 @@
 # Dan Walker's Personal Website
 
-A portfolio website for Dan Walker (add email here)
+A portfolio website for Dan Walker (daniel.walker@tictrac.com)
 
 ## Table of Contents
 
@@ -11,13 +11,13 @@ A portfolio website for Dan Walker (add email here)
 - [Available Scripts](#available-scripts)
   - [npm run start](#npm-run-start)
   - [npm run test](#npm-run-test)
+  - [npm run test:watch](#npm-run-test:watch)
   - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
   - [npm run analyze-bundle](#npm-run-analyze-bundle)
 - [Project Development Setup](#project-development-setup)
-   - [Code Splitting](#code-splitting)
-   - [Advanced Configuration](#advanced-configuration)
-   - [Deployment](#deployment)
+  - [Code Splitting](#code-splitting)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Deployment](#deployment)
 
 ## Documentation
 
@@ -38,8 +38,10 @@ This project is managed via [this](https://www.notion.so/Dan-Walker-CV-Website-f
 
 ## Contributors
 
-- **Dan Walker** (_insert@email.com_) - project manager
-- **Oliver Wilson** (_contact@oliverwilson.dev_) - software engineer
+| Name          | Email                                                  | Role              |
+| ------------- | ------------------------------------------------------ | ----------------- |
+| Dan Walker    | [daniel.walker@tictrac.com](daniel.walker@tictrac.com) | project manager   |
+| Oliver Wilson | [contact@oliverwilson.dev](contact@oliverwilson.dev)   | software engineer |
 
 ## Available Scripts
 
@@ -55,28 +57,21 @@ You will also see any lint errors in the console.
 
 ### `npm run test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the unit tests and will report code coverage at the end.\
+If any of the tests fail or if code coverage is not 100% for the files required then this command will fail.
+
+### `npm run test:watch`
+
+Runs the unit tests against the files changed with the watch mode. Tests will re-run on every saved file change.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ### `npm run analyze-bundle`
 
