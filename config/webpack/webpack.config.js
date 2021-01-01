@@ -23,9 +23,9 @@ const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const postcssNormalize = require('postcss-normalize');
-const getClientEnvironment = require('./env');
-const modules = require('./modules');
-const paths = require('./paths');
+const getClientEnvironment = require('../env');
+const modules = require('../modules');
+const paths = require('../paths');
 
 const appPackageJson = require(paths.appPackageJson);
 
