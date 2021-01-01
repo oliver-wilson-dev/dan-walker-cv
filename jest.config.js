@@ -3,6 +3,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
+    'server/**/*.js',
     '!**/*reportWebVitals.js'
   ],
   setupFiles: [
@@ -12,8 +13,8 @@ module.exports = {
     '<rootDir>/config/jest/setupTests.js'
   ],
   testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'
+    '<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'
   ],
   testEnvironment: 'jsdom',
   transform: {
