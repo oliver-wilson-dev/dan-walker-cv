@@ -227,6 +227,7 @@ module.exports = function (webpackEnv) {
       minimizer: [
         // This is only used in production mode
         new TerserPlugin({
+          extractComments: false,
           terserOptions: {
             parse: {
               // We want terser to parse ecma 8 code. However, we don't want it
@@ -552,14 +553,13 @@ module.exports = function (webpackEnv) {
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         {
-
           inject: true,
           template: paths.appHtml,
           ...(isEnvProduction
             ? {
               minify: {
-                removeComments: true,
-                collapseWhitespace: true,
+                removeComments: false,
+                collapseWhitespace: false,
                 removeRedundantAttributes: true,
                 useShortDoctype: true,
                 removeEmptyAttributes: true,

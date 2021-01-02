@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
 
+const appPackageJson = require(paths.appPackageJson);
+
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
 
@@ -88,6 +90,7 @@ function getClientEnvironment(publicUrl) {
         // which is why it's disabled by default.
         // It is defined here so it is available in the webpackHotDevClient.
         FAST_REFRESH: process.env.FAST_REFRESH !== 'false',
+        APP_VERSION: appPackageJson.version || 'APP VERSION NOT KNOWN'
       }
     );
   // Stringify all values so we can feed into webpack DefinePlugin
