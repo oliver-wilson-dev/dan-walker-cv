@@ -33,6 +33,16 @@ module.exports = {
   },
   overrides: [{
     files: ['**/*.test*'],
-    rules: { 'react/prop-types': 'off' }
-  }],
+    rules: {
+      'react/prop-types': 'off',
+      'no-console': 'off',
+    }
+  },
+  {
+    files: ['server/**/*.js*'],
+    rules: {
+      'no-console': 'off',
+    }
+  }
+  ],
 };

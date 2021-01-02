@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:
-  lint_and_test:
+  PR_against_main:
     runs-on: ubuntu-latest
     steps:
     - name: checkout repository
@@ -20,5 +20,6 @@ jobs:
         node-version: '12.x'
     - name: clean install all dependencies
       run: npm install
-    - name: run unit tests and lint project
+    - name: run unit tests, lint and build the project
+    # By running the pr-checks npm script we can change the behaviour of what checks we're running easily in the package.json
       run: npm run pr-checks
