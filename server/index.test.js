@@ -1,8 +1,8 @@
-import compression from 'compression';
+const { DEFAULT_PORT, ONE_HOUR_MS } = require('./constants');
 
 const mockUse = jest.fn();
 const mockGet = jest.fn();
-const mockListen = jest.fn();
+const mockListen = jest.fn((port, cb) => cb());
 
 jest.mock('express', () => () => ({
   use: mockUse,
@@ -20,17 +20,9 @@ jest.mock('./logAppRunning');
 jest.mock('compression');
 
 describe('server', () => {
-  const consoleLog = console.log;
   let logAppRunning;
   const mockCompressionMiddleware = Symbol('test-compression-middleware');
-
-  beforeAll(() => {
-    console.log = jest.fn();
-  });
-
-  afterAll(() => {
-    console.log = consoleLog;
-  });
+  const mockLogAppRunning = Symbol('test-log-app-running');
 
   beforeEach(() => {
     jest.resetModules();
@@ -44,6 +36,7 @@ describe('server', () => {
     path.resolve.mockImplementation((_, path) => path);
     express.static = jest.fn((path) => path);
     logAppRunning = require('./logAppRunning');
+    logAppRunning.mockReturnValue(mockLogAppRunning);
 
     compression.mockReturnValue(mockCompressionMiddleware);
   });
@@ -92,21 +85,21 @@ describe('server', () => {
         };
         mockGet.mock.calls[0][1](undefined, res);
 
-        expect(res.set).toHaveBeenCalledWith('Cache-Control', 'public, max-age=3600000');
+        expect(res.set).toHaveBeenCalledWith('Cache-Control', `public, max-age=${ONE_HOUR_MS}`);
       });
     });
   });
 
   describe('app.listen', () => {
     describe('when there is no env variable set', () => {
-      it('should call app.listen with the port 5000', () => {
+      it('should call app.listen with the DEFAULT_PORT', () => {
         require('./index');
-        expect(mockListen).toHaveBeenCalledWith(5000);
+        expect(mockListen).toHaveBeenCalledWith(DEFAULT_PORT, mockLogAppRunning);
       });
 
       it('should call logAppRunning', () => {
         require('./index');
-        expect(logAppRunning).toHaveBeenCalledWith({ PORT: 5000 });
+        expect(logAppRunning).toHaveBeenCalledWith({ PORT: DEFAULT_PORT });
       });
     });
 
@@ -124,11 +117,12 @@ describe('server', () => {
 
         process.env.PORT = mockPort;
         logAppRunning = require('./logAppRunning');
+        logAppRunning.mockReturnValue(mockLogAppRunning);
       });
 
       it('should call app.listen with the port provided by the environment variable', () => {
         require('./index');
-        expect(mockListen).toHaveBeenCalledWith(mockPort);
+        expect(mockListen).toHaveBeenCalledWith(mockPort, mockLogAppRunning);
       });
 
       it('should call logAppRunning', () => {
