@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="navigation"
+>
+  <ul
+    className="navItems"
+  >
+    <li
+      className="navItem"
+    >
+      <Link
+        className="link"
+        to="/"
+      >
+        Home
+      </Link>
+    </li>
+    <li
+      className="navItem"
+    >
+      <Link
+        className="link"
+        to="/about"
+      >
+        About
+      </Link>
+    </li>
+    <li
+      className="navItem"
+    >
+      <Link
+        className="link"
+        to="/contact"
+      >
+        Contact
+      </Link>
+    </li>
+  </ul>
+</nav>
+`;

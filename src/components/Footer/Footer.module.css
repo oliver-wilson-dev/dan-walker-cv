@@ -1,0 +1,42 @@
+@import "../../styles/globalVars.css";
+
+:root {
+    --fontSize: 12px;
+  }
+
+.footer {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333333;
+    justify-content: center;
+}
+
+.textContainer {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footerContainer {
+    width: 100%;
+    max-width: $max-content-width;
+}
+
+.link {
+    color: #fcbf49;
+}
+
+.footerDisclaimerText {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: var(--fontSize);
+    color: white;
+  
+    &:last-child {
+      margin-bottom: 0px;
+    }
+}

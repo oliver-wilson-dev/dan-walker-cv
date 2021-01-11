@@ -1,38 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
+<BrowserRouter>
+  <div
+    className="App"
   >
-    <img
-      alt="logo"
-      className={
-        Array [
-          "App-logo",
-        ]
-      }
-      src="logo.svg"
-    />
-    <p>
-      Edit
-       
-      <code>
-        src/components/App.js
-      </code>
-       
-      and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Learn React
-    </a>
-  </header>
-</div>
+    <Navigation />
+    <Switch>
+      <Route
+        exact={true}
+        path="/"
+      >
+        <HomePage />
+      </Route>
+      <Route
+        path="/about"
+      >
+        <AboutPage />
+      </Route>
+      <Route
+        path="/contact"
+      >
+        <ContactPage />
+      </Route>
+    </Switch>
+    <Footer />
+  </div>
+</BrowserRouter>
 `;

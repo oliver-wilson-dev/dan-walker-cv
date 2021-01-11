@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footerContainer"
+  >
+    <div
+      className="textContainer"
+    >
+      <span
+        className="footerDisclaimerText"
+      >
+        This site doesn't use cookies... yet.
+      </span>
+      <div
+        className="footerDisclaimerText"
+      >
+        Icons made by
+         
+        <a
+          className="link"
+          href="https://www.flaticon.com/authors/freepik"
+          title="Freepik"
+        >
+          Freepik
+        </a>
+         
+        from
+         
+        <a
+          className="link"
+          href="https://www.flaticon.com/"
+          title="Flaticon"
+        >
+          www.flaticon.com
+        </a>
+      </div>
+      <span
+        className="footerDisclaimerText"
+      >
+        The code for this website can be found on
+         
+        <a
+          className="link"
+          href="https://github.com/oliver-wilson-dev/dan-walker-cv"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github
+        </a>
+        .
+      </span>
+      <span
+        className="footerDisclaimerText"
+      >
+        ©2021, Oliver Wilson
+      </span>
+    </div>
+  </div>
+</footer>
+`;
