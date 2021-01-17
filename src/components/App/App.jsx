@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,31 +6,43 @@ import {
 } from 'react-router-dom';
 
 import Navigation from '../Navigation';
-import HomePage from '../HomePage';
-import AboutPage from '../AboutPage';
-import ContactPage from '../ContactPage';
 import Footer from '../Footer';
+import LoadingSpinner from '../LoadingSpinner';
+
+import useLazyLoadComponent from '../../helpers/lazyLoadComponent';
 
 import styles from './App.module.css';
+import Fallback from '../Fallback';
 
-const App = () => (
-  <Router>
+const HomePage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "HomePage" */'../HomePage') });
+const AboutPage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "AboutPage" */'../AboutPage') });
+const ContactPage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "ContactPage" */'../ContactPage') });
+
+const App = () => {
+  const [loading, setLoading] = useState(false);
+
+  return (
     <div className={styles.App}>
-      <Navigation />
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/about">
-          <AboutPage />
-        </Route>
-        <Route path="/contact">
-          <ContactPage />
-        </Route>
-      </Switch>
-      <Footer />
+      <Router>
+        <Navigation />
+        <LoadingSpinner show={loading} />
+        <Suspense fallback={<Fallback setLoading={setLoading} />}>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/about">
+              <AboutPage />
+            </Route>
+            <Route path="/contact">
+              <ContactPage />
+            </Route>
+          </Switch>
+        </Suspense>
+        <Footer />
+      </Router>
     </div>
-  </Router>
-);
+  );
+};
 
 export default App;

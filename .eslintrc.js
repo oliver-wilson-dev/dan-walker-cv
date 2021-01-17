@@ -12,8 +12,10 @@ module.exports = {
     es6: true,
     'jest/globals': true
   },
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2018
+    ecmaVersion: 2018,
+    allowImportExportEverywhere: true
   },
   rules: {
     'no-console': 'warn',
@@ -36,6 +38,7 @@ module.exports = {
     files: ['**/*.test*'],
     rules: {
       'react/prop-types': 'off',
+      'react/jsx-props-no-spreading': 'off',
       'no-console': 'off',
     }
   },
