@@ -25,6 +25,7 @@
   cursor: pointer;
   max-width: $max-content-width;
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .navItem {
