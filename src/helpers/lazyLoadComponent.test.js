@@ -34,7 +34,7 @@ describe('lazyLoadComponent', () => {
 
     lazyLoadComponent({ importFn });
 
-    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 2000);
+    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 1300);
 
     jest.useRealTimers();
   });
