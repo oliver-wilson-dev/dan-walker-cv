@@ -13,6 +13,7 @@ import useLazyLoadComponent from '../../helpers/lazyLoadComponent';
 
 import styles from './App.module.css';
 import Fallback from '../Fallback';
+import CookieDisclaimer from '../../containers/CookieDisclaimer';
 
 const HomePage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "HomePage" */'../HomePage') });
 const AboutPage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "AboutPage" */'../AboutPage') });
@@ -39,6 +40,7 @@ const App = () => {
             </Route>
           </Switch>
         </Suspense>
+        <CookieDisclaimer />
         <Footer />
       </Router>
     </div>

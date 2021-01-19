@@ -62,6 +62,12 @@ jest.mock('../Footer', () => {
   return Footer;
 });
 
+jest.mock('../../containers/CookieDisclaimer', () => {
+  const CookieDisclaimer = () => null;
+
+  return CookieDisclaimer;
+});
+
 jest.mock('../../helpers/lazyLoadComponent', () => ({ importFn }) => {
   importFn();
   const LazyLoadedComponent = () => null;

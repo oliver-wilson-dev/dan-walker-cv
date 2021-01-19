@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from '../components/App';
+import ReduxStoreProvider from '../components/ReduxStoreProvider';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -15,13 +16,21 @@ jest.mock('../components/App', () => {
   return App;
 });
 
+jest.mock('../components/ReduxStoreProvider', () => {
+  const ReduxStoreProvider = () => null;
+
+  return ReduxStoreProvider;
+});
+
 describe('clientEntry', () => {
   it('should render correctly', () => {
     require('./index');
 
     expect(render).toHaveBeenCalledWith(
       <React.StrictMode>
-        <App />
+        <ReduxStoreProvider>
+          <App />
+        </ReduxStoreProvider>
       </React.StrictMode>,
       global.document.getElementById('root')
     );

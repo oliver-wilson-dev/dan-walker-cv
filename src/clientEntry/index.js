@@ -2,10 +2,13 @@ import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
 import App from '../components/App';
+import ReduxStoreProvider from '../components/ReduxStoreProvider';
 
 render(
   <React.StrictMode>
-    <App />
+    <ReduxStoreProvider>
+      <App />
+    </ReduxStoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
