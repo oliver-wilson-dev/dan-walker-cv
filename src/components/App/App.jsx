@@ -9,15 +9,12 @@ import Navigation from '../Navigation';
 import Footer from '../Footer';
 import LoadingSpinner from '../LoadingSpinner';
 
-import useLazyLoadComponent from '../../helpers/lazyLoadComponent';
-
 import styles from './App.module.css';
 import Fallback from '../Fallback';
 import CookieDisclaimer from '../../containers/CookieDisclaimer';
+import routes from '../../routes';
 
-const HomePage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "HomePage" */'../HomePage') });
-const AboutPage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "AboutPage" */'../AboutPage') });
-const ContactPage = useLazyLoadComponent({ importFn: () => import(/* webpackChunkName: "ContactPage" */'../ContactPage') });
+const { home, about, contact } = routes;
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -29,14 +26,14 @@ const App = () => {
         <LoadingSpinner show={loading} />
         <Suspense fallback={<Fallback setLoading={setLoading} />}>
           <Switch>
-            <Route exact path="/">
-              <HomePage />
+            <Route exact path={home.route}>
+              <home.component />
             </Route>
-            <Route path="/about">
-              <AboutPage />
+            <Route path={about.route}>
+              <about.component />
             </Route>
-            <Route path="/contact">
-              <ContactPage />
+            <Route path={contact.route}>
+              <contact.component />
             </Route>
           </Switch>
         </Suspense>

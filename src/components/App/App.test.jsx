@@ -38,24 +38,6 @@ jest.mock('../LoadingSpinner', () => {
   return LoadingSpinner;
 });
 
-jest.mock('../HomePage', () => {
-  const HomePage = () => null;
-
-  return HomePage;
-});
-
-jest.mock('../AboutPage', () => {
-  const AboutPage = () => null;
-
-  return AboutPage;
-});
-
-jest.mock('../ContactPage', () => {
-  const ContactPage = () => null;
-
-  return ContactPage;
-});
-
 jest.mock('../Footer', () => {
   const Footer = () => <footer />;
 
@@ -74,6 +56,25 @@ jest.mock('../../helpers/lazyLoadComponent', () => ({ importFn }) => {
 
   return LazyLoadedComponent;
 });
+
+const HomePage = () => null;
+const AboutPage = () => null;
+const ContactPage = () => null;
+
+jest.mock('../../routes', () => ({
+  home: {
+    component: HomePage,
+    route: 'test-home-route'
+  },
+  about: {
+    component: AboutPage,
+    route: 'test-about-route'
+  },
+  contact: {
+    component: ContactPage,
+    route: 'test-contact-route'
+  }
+}));
 
 const render = () => shallow(<App />);
 

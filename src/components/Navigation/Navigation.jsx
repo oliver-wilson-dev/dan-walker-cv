@@ -1,22 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import TopNav from './TopNav';
 import styles from './Navigation.module.css';
+import SideNav from './SideNav';
 
 const Navigation = () => (
-  <nav className={styles.navigation}>
-    <ul className={styles.navItems}>
-      <li className={styles.navItem}>
-        <Link className={styles.link} to="/">Home</Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.link} to="/about">About</Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.link} to="/contact">Contact</Link>
-      </li>
-    </ul>
-  </nav>
+  <div className={styles.navigation}>
+    <TopNav />
+    <SideNav />
+  </div>
 );
 
 export default Navigation;

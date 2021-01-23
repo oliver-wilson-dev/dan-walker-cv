@@ -19,19 +19,19 @@ exports[`App renders correctly 1`] = `
       <Switch>
         <Route
           exact={true}
-          path="/"
+          path="test-home-route"
         >
-          <LazyLoadedComponent />
+          <HomePage />
         </Route>
         <Route
-          path="/about"
+          path="test-about-route"
         >
-          <LazyLoadedComponent />
+          <AboutPage />
         </Route>
         <Route
-          path="/contact"
+          path="test-contact-route"
         >
-          <LazyLoadedComponent />
+          <ContactPage />
         </Route>
       </Switch>
     </Suspense>
