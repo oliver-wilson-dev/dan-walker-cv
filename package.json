@@ -1,6 +1,6 @@
 {
   "name": "dan-walker-cv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "analyze-bundle": "npm run build && npx source-map-explorer 'build/static/js/*.js'",
