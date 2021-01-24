@@ -18,6 +18,7 @@ A portfolio website for Dan Walker (daniel.walker@tictrac.com)
   - [Code Splitting](#code-splitting)
   - [Advanced Configuration](#advanced-configuration)
   - [Deployment](#deployment)
+- [Hosting](#Hosting)
 
 ## Documentation
 
@@ -98,3 +99,11 @@ Read more on this topic in the create-react-app documentation [here](https://fac
 ### `npm run build` fails to minify
 
 Read more on this topic in the create-react-app documentation [here](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Hosting
+
+This application is hosted via the Google Cloud Platform.
+
+Some files related to this are `app.yaml`, `.gcloudignore` and `./github/workflows/release.yaml`. They are all required.
+
+For information on the Github action used to deploy the application and start it on the Google Cloud Platform, [click here](https://github.com/google-github-actions/setup-gcloud/tree/master/appengine-deploy).
