@@ -20,6 +20,12 @@ jest.mock('react', () => ({
   ),
 }));
 
+jest.mock('../ErrorBoundary', () => {
+  const ErrorBoundary = ({ children }) => <>{children}</>;
+
+  return ErrorBoundary;
+});
+
 jest.mock('../Navigation', () => {
   const Navigation = () => null;
 
@@ -48,13 +54,6 @@ jest.mock('../../containers/CookieDisclaimer', () => {
   const CookieDisclaimer = () => null;
 
   return CookieDisclaimer;
-});
-
-jest.mock('../../helpers/lazyLoadComponent', () => ({ importFn }) => {
-  importFn();
-  const LazyLoadedComponent = () => null;
-
-  return LazyLoadedComponent;
 });
 
 const HomePage = () => null;

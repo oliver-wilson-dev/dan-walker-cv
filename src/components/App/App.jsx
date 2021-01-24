@@ -1,20 +1,17 @@
 import React, { Suspense, useState } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
 } from 'react-router-dom';
 
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 import LoadingSpinner from '../LoadingSpinner';
+import Switch from '../Switch';
 
 import styles from './App.module.css';
 import Fallback from '../Fallback';
 import CookieDisclaimer from '../../containers/CookieDisclaimer';
-import routes from '../../routes';
-
-const { home, about, contact } = routes;
+import ErrorBoundary from '../ErrorBoundary';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -25,17 +22,9 @@ const App = () => {
         <Navigation />
         <LoadingSpinner show={loading} />
         <Suspense fallback={<Fallback setLoading={setLoading} />}>
-          <Switch>
-            <Route exact path={home.route}>
-              <home.component />
-            </Route>
-            <Route path={about.route}>
-              <about.component />
-            </Route>
-            <Route path={contact.route}>
-              <contact.component />
-            </Route>
-          </Switch>
+          <ErrorBoundary>
+            <Switch />
+          </ErrorBoundary>
         </Suspense>
         <CookieDisclaimer />
         <Footer />
