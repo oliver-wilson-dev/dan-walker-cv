@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import ErrorIcon from './assets/error.svg';
 import styles from './ErrorBoundary.module.css';
