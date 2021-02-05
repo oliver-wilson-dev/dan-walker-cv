@@ -14,6 +14,12 @@ jest.mock('../../../routes', () => ({
   }
 }));
 
+jest.mock('../../../containers/ThemeSwitch', () => {
+  const ThemeSwitch = (props) => <button type="button" {...props} />;
+
+  return ThemeSwitch;
+});
+
 jest.mock('react-router-dom', () => ({
   NavLink: ({ children }) => <>{children}</>
 }));

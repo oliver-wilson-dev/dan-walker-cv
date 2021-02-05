@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { act } from 'react-dom/test-utils';
 import SideNav from './index';
-import BurgerMenu from './assets/burgerMenu.svg';
+import ThemeSwitch from '../../../containers/ThemeSwitch';
 import styles from './SideNav.module.css';
 import { preventScroll, allowScroll } from './utils/overlay';
 
@@ -23,6 +22,12 @@ jest.mock('./assets/burgerMenu.svg', () => {
   const BurgerMenu = (props) => <button type="button" {...props} />;
 
   return BurgerMenu;
+});
+
+jest.mock('../../../containers/ThemeSwitch', () => {
+  const ThemeSwitch = (props) => <button type="button" {...props} />;
+
+  return ThemeSwitch;
 });
 
 const render = (

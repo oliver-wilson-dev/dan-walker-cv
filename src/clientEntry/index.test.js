@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from '../components/App';
+import App from '../containers/App';
 import ReduxStoreProvider from '../components/ReduxStoreProvider';
 
 jest.mock('react', () => ({
@@ -10,7 +10,7 @@ jest.mock('react', () => ({
 
 jest.mock('react-dom');
 
-jest.mock('../components/App', () => {
+jest.mock('../containers/App', () => {
   const App = () => null;
 
   return App;

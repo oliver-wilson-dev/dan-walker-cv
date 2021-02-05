@@ -1,8 +1,10 @@
-import { COOKIES_ACCEPTED } from '../actionTypes';
+import { COOKIES_ACCEPTED, TOGGLE_THEME } from '../actionTypes';
+import { DARK_THEME, LIGHT_THEME } from '../../styles/constants';
 
 const defaultState = {
   message: 'hello world',
-  cookiesAccepted: false
+  cookiesAccepted: false,
+  theme: LIGHT_THEME
 };
 
 const reducer = (state = defaultState, action) => {
@@ -14,6 +16,14 @@ const reducer = (state = defaultState, action) => {
         ...state,
         cookiesAccepted: true
       };
+    case TOGGLE_THEME: {
+      const newTheme = state.theme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
+
+      return {
+        ...state,
+        theme: newTheme
+      };
+    }
     default:
       return { ...state };
   }

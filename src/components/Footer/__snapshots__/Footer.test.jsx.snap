@@ -45,7 +45,7 @@ exports[`renders correctly 1`] = `
          
         <a
           className="link"
-          href="https://github.com/oliver-wilson-dev/dan-walker-cv"
+          href="https://github.com/oliver-wilson-dev/website-template"
           rel="noopener noreferrer"
           target="_blank"
         >

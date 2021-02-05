@@ -1,0 +1,27 @@
+.moon {
+    width: 30px;
+    height: 30px;
+}
+
+.sun {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    background-color: unset;
+    border: none;
+    padding: 0px;
+    opacity: 1;
+
+    transition: transform 0.1s;
+    transition-timing-function: linear;
+}
+
+.hide {
+    transform: scale(0);
+}
+
+.show {
+    transform: scale(1);
+}

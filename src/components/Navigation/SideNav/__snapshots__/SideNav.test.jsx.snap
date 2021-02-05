@@ -2,6 +2,9 @@
 
 exports[`<SideNav/> component should render correctly 1`] = `
 <Fragment>
+  <ThemeSwitch
+    className="themeSwitch"
+  />
   <BurgerMenu
     className="icon"
     onClick={[Function]}
@@ -62,6 +65,14 @@ exports[`<SideNav/> component should render correctly 1`] = `
 
 exports[`<SideNav/> component when clicking on the burger menu and then clicking on the cross icon should close the side nav 1`] = `
 <SideNav>
+  <ThemeSwitch
+    className="themeSwitch"
+  >
+    <button
+      className="themeSwitch"
+      type="button"
+    />
+  </ThemeSwitch>
   <BurgerMenu
     className="icon"
     onClick={[Function]}
@@ -146,6 +157,14 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
 
 exports[`<SideNav/> component when clicking on the burger menu and then clicking on the overlay should close the side nav 1`] = `
 <SideNav>
+  <ThemeSwitch
+    className="themeSwitch"
+  >
+    <button
+      className="themeSwitch"
+      type="button"
+    />
+  </ThemeSwitch>
   <BurgerMenu
     className="icon"
     onClick={[Function]}
@@ -230,6 +249,14 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
 
 exports[`<SideNav/> component when clicking on the burger menu should open the side nav 1`] = `
 <SideNav>
+  <ThemeSwitch
+    className="themeSwitch"
+  >
+    <button
+      className="themeSwitch"
+      type="button"
+    />
+  </ThemeSwitch>
   <BurgerMenu
     className="icon burgerMenuHide"
     onClick={[Function]}

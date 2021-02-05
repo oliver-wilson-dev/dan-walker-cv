@@ -6,17 +6,26 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-end;
-  background-color: $background-grey;
+  background-color: var(--background-colour);
+
+  & div, p, h1, h2, h3, h4, h5, span, a {
+    transition: background-color 500ms ease-in-out, color 1000ms ease-in-out;
+  }
 }
 
 a {
   text-decoration: none;
-  color: rgb(21, 64, 204);
+  color: $link-blue;
 }
 
 p {
   font-size: 14px;
 }
+
+p, h1, h2, h3, h4, h5, span, a {
+  color: var(--text-colour);
+}
+
 .App-link {
   color: #61dafb;
 }

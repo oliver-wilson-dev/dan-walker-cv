@@ -20,7 +20,7 @@ const Footer = () => (
         <span className={styles.footerDisclaimerText}>
           The code for this website can be found on
           {' '}
-          <a className={styles.link} href="https://github.com/oliver-wilson-dev/dan-walker-cv" target="_blank" rel="noopener noreferrer">github</a>
+          <a className={styles.link} href="https://github.com/oliver-wilson-dev/website-template" target="_blank" rel="noopener noreferrer">github</a>
           .
         </span>
         <span className={styles.footerDisclaimerText}>©2021, Oliver Wilson</span>

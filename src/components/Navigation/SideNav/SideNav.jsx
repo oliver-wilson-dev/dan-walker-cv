@@ -7,6 +7,7 @@ import BurgerMenu from './assets/burgerMenu.svg';
 import { preventScroll, allowScroll } from './utils/overlay';
 import routes from '../../../routes';
 import styles from './SideNav.module.css';
+import ThemeSwitch from '../../../containers/ThemeSwitch';
 
 const { home, about, contact } = routes;
 
@@ -39,6 +40,7 @@ const SideNav = () => {
 
   return (
     <>
+      <ThemeSwitch className={styles.themeSwitch} />
       <BurgerMenu
         className={cn(styles.icon, {
           [styles.burgerMenuHide]: showSideNav

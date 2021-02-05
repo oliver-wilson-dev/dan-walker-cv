@@ -18,7 +18,7 @@ exports[`ErrorBoundary when there is an error thrown by a child should render th
     <h1>
       Something went wrong
     </h1>
-    <error.svg
+    <ErrorIcon
       className="icon"
     />
   </div>

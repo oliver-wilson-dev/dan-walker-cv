@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import LoadingSpinner from '../LoadingSpinner';
 import App from './App';
+import { LIGHT_THEME, DARK_THEME } from '../../styles/constants';
 
 jest.mock('react-router-dom', () => ({
   __esModule: true,
@@ -75,11 +76,19 @@ jest.mock('../../routes', () => ({
   }
 }));
 
-const render = () => shallow(<App />);
+const render = (props = {}) => shallow(<App {...props} />);
 
 describe('App', () => {
-  it('renders correctly', () => {
-    expect(render()).toMatchSnapshot();
+  describe('when the theme is the light theme', () => {
+    it('renders correctly', () => {
+      expect(render({ theme: LIGHT_THEME })).toMatchSnapshot();
+    });
+  });
+
+  describe('when the theme is the dark theme', () => {
+    it('renders correctly', () => {
+      expect(render({ theme: DARK_THEME })).toMatchSnapshot();
+    });
   });
 
   it('should call the LoadingSpinner with the show prop set to false', () => {
