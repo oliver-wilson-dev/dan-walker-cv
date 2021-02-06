@@ -69,7 +69,7 @@ const SideNav = () => {
             <li className={styles.menuItem}>
               <NavLink
                 to={home.route}
-                className={cn(styles.link, styles.menuItemMargin)}
+                className={styles.link}
                 onClick={toggleShowSideNav}
               >
                 Home
@@ -78,7 +78,7 @@ const SideNav = () => {
             <li className={styles.menuItem}>
               <NavLink
                 to={about.route}
-                className={cn(styles.link, styles.menuItemMargin)}
+                className={styles.link}
                 onClick={toggleShowSideNav}
               >
                 About
@@ -87,7 +87,7 @@ const SideNav = () => {
             <li className={styles.menuItem}>
               <NavLink
                 to={contact.route}
-                className={cn(styles.link, styles.menuItemMargin)}
+                className={styles.link}
                 onClick={toggleShowSideNav}
               >
                 Contact

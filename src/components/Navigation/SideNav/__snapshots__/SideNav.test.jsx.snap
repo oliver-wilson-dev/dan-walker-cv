@@ -28,7 +28,7 @@ exports[`<SideNav/> component should render correctly 1`] = `
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/"
           >
@@ -39,7 +39,7 @@ exports[`<SideNav/> component should render correctly 1`] = `
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/about"
           >
@@ -50,7 +50,7 @@ exports[`<SideNav/> component should render correctly 1`] = `
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/contact"
           >
@@ -108,7 +108,7 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/"
           >
@@ -123,7 +123,7 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/about"
           >
@@ -138,7 +138,7 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/contact"
           >
@@ -200,7 +200,7 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/"
           >
@@ -215,7 +215,7 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/about"
           >
@@ -230,7 +230,7 @@ exports[`<SideNav/> component when clicking on the burger menu and then clicking
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/contact"
           >
@@ -292,7 +292,7 @@ exports[`<SideNav/> component when clicking on the burger menu should open the s
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/"
           >
@@ -307,7 +307,7 @@ exports[`<SideNav/> component when clicking on the burger menu should open the s
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/about"
           >
@@ -322,7 +322,7 @@ exports[`<SideNav/> component when clicking on the burger menu should open the s
           className="menuItem"
         >
           <NavLink
-            className="link menuItemMargin"
+            className="link"
             onClick={[Function]}
             to="/contact"
           >
