@@ -28,12 +28,7 @@ const LoadingSpinner = ({ show }) => (
         [styles.loadingSpinnerShow]: show,
         [styles.loadingSpinnerHide]: !show
       })}
-    >
-      <div />
-      <div />
-      <div />
-      <div />
-    </div>
+    />
   </>
 );
 

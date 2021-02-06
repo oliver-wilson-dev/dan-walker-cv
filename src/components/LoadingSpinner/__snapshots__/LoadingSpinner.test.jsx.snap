@@ -8,12 +8,7 @@ exports[`LoadingSpinner when the component should not show renders correctly 1`]
   />
   <div
     className="loadingSpinner loadingSpinnerShow"
-  >
-    <div />
-    <div />
-    <div />
-    <div />
-  </div>
+  />
 </Fragment>
 `;
 
@@ -25,11 +20,6 @@ exports[`LoadingSpinner when the component should show renders correctly 1`] = `
   />
   <div
     className="loadingSpinner loadingSpinnerShow"
-  >
-    <div />
-    <div />
-    <div />
-    <div />
-  </div>
+  />
 </Fragment>
 `;
