@@ -2,6 +2,9 @@
 
 exports[`LoadingSpinner when the component should not show renders correctly 1`] = `
 <Fragment>
+  <Page
+    className="loadingPage"
+  />
   <div
     className="wrapper wrapperShow"
     onClick={[Function]}
@@ -14,6 +17,9 @@ exports[`LoadingSpinner when the component should not show renders correctly 1`]
 
 exports[`LoadingSpinner when the component should show renders correctly 1`] = `
 <Fragment>
+  <Page
+    className="loadingPage"
+  />
   <div
     className="wrapper wrapperShow"
     onClick={[Function]}
